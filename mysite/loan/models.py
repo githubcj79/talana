@@ -60,4 +60,4 @@ class CarInstance(models.Model):
 
     def __str__(self):
         """String for representing the Model object."""
-        return '{0} ({1})'.format(self.id, self.book.brand)
+        return '{0} ({1})'.format(self.id, self.car.brand)
