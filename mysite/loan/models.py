@@ -10,6 +10,9 @@ class Car(models.Model):
     diesel = models.BooleanField()
     persons = models.IntegerField()
 
+    class Meta:
+        ordering = ['brand', '-year', '-doors']
+
     def get_absolute_url(self):
         """Returns the url to access a particular car instance."""
         return reverse('car-detail', args=[str(self.id)])
